@@ -1,0 +1,29 @@
+# Rezultati testiranja kalkulatora
+
+## Black box testovi
+
+| Test ID | Ulaz | Očekivani izlaz | Stvarni izlaz | Status |
+|----------|------|------------------|----------------|---------|
+| TC1 | 5 + 3 | 8 | 8 | PASS |
+| TC2 | 10 - 4 | 6 | 6 | PASS |
+| TC3 | 7 * 6 | 42 | 42 | PASS |
+| TC4 | 20 / 4 | 5 | 5 | PASS |
+| TC5 | 10 / 0 | Greška: deljenje nulom | Greška: deljenje nulom | PASS |
+| TC6 | 8 ? 2 | Nepoznata operacija | Nepoznata operacija | PASS |
+
+---
+
+## Unit testovi (JUnit)
+
+| Test metoda | Očekivani rezultat | Status |
+|--------------|--------------------|---------|
+| testSabiranje | 8 | PASS |
+| testOduzimanje | 6 | PASS |
+| testMnozenje | 42 | PASS |
+| testDeljenje | 5 | PASS |
+| testDeljenjeNulom | ArithmeticException | PASS |
+
+---
+
+## Zaključak
+Svi testovi su uspešno prošli. Program pravilno rukuje svim osnovnim operacijama i greškama pri deljenju nulom.
